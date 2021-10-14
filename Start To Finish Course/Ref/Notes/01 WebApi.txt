@@ -1,0 +1,37 @@
+Creating ASP.net WebAPI .net framework
+DataManager.API > get the 4.8 framework
+Check individual user accounts
+MVC and WebAPI
+
+Upgrade all the nuget packages
+Except bootstrap
+
+Discuss the APP_Start > WebApiConfig and RouteConfig
+
+Discuss the APP_Start > IdentifyConfig
+(authentication purposes)
+
+Run the solution
+Discuss the default APIs
+
+Call api using browser
+Call api using postman
+
+Register account using postman
+Explain why not create a default user thru codes
+
+After creation of user proceed with the token
+
+
+Modify Values ApiController
+Include using Microsoft.AspNet.Identity;
+
+string userId = RequestContext.Principal.Identity.GetUserId();
+
+IHttpActionResult
+return Ok(new string[] { "value1", "value2", userId });
+
+Commit
+Add the Web API Project
+
+Adds blank Web API project and tweaks it.

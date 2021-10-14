@@ -1,0 +1,263 @@
+git config --global user.name "[your name]"
+git config --global user.email [your repo email]
+
+VCS explain via demostration
+continue explaining git
+
+installation
+go to http://git-scm.com/
+
+git introduced by Linus Benedict Torvalds in 2005
+also know creator and founder of linux
+
+Goals of Source Code
+1. Versioning of files
+2. Improved development process
+3. Historical view
+4. Work with a team
+
+*git init
+*git init [repository]
+there are 3 types of instantiate
+git clone
+
+>notepad README.md
+
+md or markdown file extension is used to save text files written with markdown language dialect. MD files are plain text files that employ the Markdown language, which includes inline text symbols that define how a text might be structured, including indents, table formatting, fonts, and headers.
+
+<#Welcome to the Git Demo#
+
+This is where we have information about our demo repo.>
+
+*git status
+
+*git add [file name]
+>git status
+
+*git config --global core.editor [your editor]
+*git commit
+<added initial readme file>
+***historical view
+
+>git status
+
+~ README.md > "This is my second line."
+
+>git status
+
+*git add .
+>git status
+
+*git commit -m "[commit message]"
+updated readme file with more info
+
+starting to be complex
+go to http://www.initializr.com/
+
+>git status
+
+>git add .
+
+be careful in this warnings lf vs crlf means like vs linux vs windows please look into that warning 
+
+>git status
+>git commit -m "added html templates"
+>git status
+
+our boss wants to work on new feature will work on 1 week
+
+>git branch
+
+*git branch [branch name]
+>git branch
+
+*git checkout [branch name]
+
+~delete all files
+>git status
+>git add .
+>git status
+
+*git add --all
+>git status
+
+>git commit -m "I want to destroy the repo"
+>git status
+
+oh no! what happened
+<show both cmd and folder>
+
+>git branch
+>git checkout master
+>git status
+
+>git checkout dev
+>git checkout  master
+>git branch -d dev
+
+branch not fully merge wanna delete use -D
+
+>git branch -D dev
+>git status
+>git branch
+
+*git checkout -b dev
+>git branch
+
+branching and checkout in one command
+
+>git status
+
+~copy 404 and paste 403 rename > Forbidden
+Sorry, but you do not have access to this page
+It looks like thios was the result of eithera mistyped address
+you are where you should not be
+
+~change someting in index >
+Git Demo
+Hello, git user!
+
+>git status
+>git add .
+>git status
+
+>git commit
+~added 403 page
+updated contents of the index page
+
+>git status
+>git checkout master
+
+>git checkout dev
+
+*git merge [branch name]
+>git status
+
+there is nothing to merge from master since the checkout so we are good
+
+>git checkout master
+>git status
+
+>git merge dev
+
+check the merge files
+
+>git status
+>git checkout dev
+
+~add ToDo.txt > Test the site
+Add a 400 page
+
+>git status
+>git add create.config
+>git status
+>git commit -m "Added list of changes to be made to site"
+
+>git status
+
+>git checkout -b bug
+~change something in index
+Git
+This is our sample fix from bug branch
+
+>git status
+>git add index.html
+>git status
+>git commit -m "fixed the bug on the index page"
+
+>git merge master
+>git checkout master
+>git merge bug
+
+>git branch -D bug
+>git branch
+
+>git checkout dev
+>git status
+
+>git merge master
+>git status
+
+>git checkout master
+>git status
+
+>git merge dev
+>git status
+
+***Improved development process
+***Versioning of files
+
+we can do that in our local only
+
+***Work with a team
+
+github/bitbucket
+
+go to https://github.com/
+
+there is a readily codes to proceed with the integration
+
+*git remote add origin [repository]
+
+https/ssh is communication
+
+>git remote
+>git status
+
+*git push -u origin master
+
+this means allow us to track the version
+
+>git status
+
+your branch is upto date
+
+>git branch
+branch only in your local not in remote
+
+check all in github
+
+>git status
+*git branch -D [branch name]
+
+>git checkout -b dev
+
+~update ToDo.txt
+Update index page to be less generic
+
+update index
+This is our git demo site to show off all the git can do.
+DBTI 2021
+
+>git status
+>git add .
+>git commit -m "started modifications to site"
+
+>git status
+>git merge master
+>git checkout master
+>git merge dev
+>git status
+
+>git branch -D dev
+
+*git pull [remote] [branch]
+*git push [remote] [branch]
+**origin master
+
+create new repo in github
+
+git clone [repo]
+
+explain and remove the .git
+delete also the demo repo
+
+---prepare git push in repo
+
+>git clone [repo]
+>git status
+>git remote
+
+
+*git push --set--upstream origin alpha
+*git push --all

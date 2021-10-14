@@ -1,0 +1,35 @@
+Create new repo
+RetailManager
+
+Desc: A retail management system build by Danilo II Veroy > make it private
+
+Lets add a readme file that will allow us to put more details for project
+Just like what I did here Direc-Business-Technologies-Inc/DREAMS: A OB uploader for DREAMS built by Direc Business Technologies (github.com)
+
+Lets also include gitignore file that allows us to ignore ( don’t count this files ) some local config in our project 
+Ignore VIsualStudio
+
+Lets also add the license file 
+Choose an open source license | Choose a License
+
+Lets create now the repository
+
+Explain the created repo
+Edit something
+
+Clone the repo and start creating empty solution
+
+Explain back and fort/ push/pull function
+
+
+Commit
+Add VS Solution File
+
+Adds the blank solution for the Retail Manager application
+
+
+Update MD
+
+Update Readme File
+
+Added proper spacing to the header

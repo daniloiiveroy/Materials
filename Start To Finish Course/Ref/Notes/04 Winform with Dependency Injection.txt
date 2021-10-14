@@ -1,0 +1,71 @@
+Create new project that is winform .net framework
+For the naming, we would like to be clean.
+We can name it ApplicataionUserInterface but we can use another platform so what should we name it after this?
+So we can name it line RMApplicationDesktopUI or RMApplication.DesktopUI
+
+Then go to properties and change the assembly name to RetailManager
+so what this does is to change the application name into this RetailManager.exe
+
+Next we have problem but for now we want to set the winform as startup project
+Then explain it why
+
+Open nuget package and add caliburn.micro
+This is to prepare us for Dependency Injection
+
+Next will create the MVVM pattern/layer
+	• Models
+	• ViewModels
+	• Views
+
+We break it in 3 layers but this 3 still the UI project
+
+Models means to hold all the data for the views display
+And the viewmodels kind like a connection with model and view
+
+
+We will use SOLID design patterns
+S - single responsibility
+O - open/close
+L - liskov substitute
+I - interface segmentation
+D - dependency inversion
+
+Create ShellView in Views folder and change the Program to ShellView
+
+With this we will use autofac
+So we will begin to wire up the autofac
+
+Create a interface for ShellView
+Create the ContrainerConfig
+
+public static IContainer Configure()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterType<ShellView>().As<IShellView>();
+
+            return builder.Build();
+        }
+
+
+Change the program to this
+ var container = ContainerConfig.Configure();
+            using (var scope = container.BeginLifetimeScope())
+            {
+                var app = scope.Resolve<IShellView>();
+                Application.Run(app.Run());
+            }
+
+Then run
+Now commit
+
+Add WPF Project with MVVM
+
+Adds our WinForm user interface project
+and configure it with AutoFac for our
+MVVM framework. Also includes the
+Container DI system.
+
+If you notice the publishlocations folder is red dot. Meaning our
+.gitignore files is working
+
+After reviewing the codes lets push

@@ -1,0 +1,66 @@
+Users
+CREATE TABLE [dbo].[Users]
+(
+	[Id] NVARCHAR(128) NOT NULL PRIMARY KEY, 
+    [FirstName] NVARCHAR(50) NOT NULL, 
+    [LastName] NVARCHAR(50) NOT NULL, 
+    [Email] NVARCHAR(256) NOT NULL, 
+    [CreatedDate] DATETIME2 NOT NULL DEFAULT getutcdate()
+)
+
+ItemMaster
+
+CREATE TABLE [dbo].[ItemMaster]
+(
+	[ItemCode] NVARCHAR(50) NOT NULL PRIMARY KEY, 
+    [ItemName] NVARCHAR(254) NOT NULL, 
+    [Price] MONEY NOT NULL DEFAULT 0,
+    [CreatedUserId] NVARCHAR(128) NOT NULL,
+    [CreatedDate] DATETIME2 NOT NULL DEFAULT getutcdate(), 
+    [ModifiedUserId] NVARCHAR(128) NOT NULL, 
+    [ModifiedDate] DATETIME2 NOT NULL DEFAULT getutcdate()
+)
+
+
+Sales
+
+CREATE TABLE [dbo].[Sales]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [NumSeries] INT NOT NULL DEFAULT 1, 
+    [Status] CHAR NOT NULL DEFAULT 'O',
+    [SalesDate] DATETIME2 NOT NULL, 
+    [SubTotal] MONEY NOT NULL, 
+    [Discount] MONEY NOT NULL, 
+    [Tax] MONEY NOT NULL, 
+    [Total] MONEY NOT NULL, 
+    [CreatedUserId] NVARCHAR(128) NOT NULL, 
+    [CreatedDate] DATETIME2 NOT NULL DEFAULT getutcdate()
+)
+
+
+Inventory
+
+CREATE TABLE [dbo].[Inventory]
+(
+	[ItemCode] NVARCHAR(50) NOT NULL, 
+    [PurchaseDate] DATETIME2 NULL, 
+    [PurchasePrice] MONEY NOT NULL DEFAULT 0, 
+    [Quantity] NCHAR(10) NOT NULL DEFAULT 0
+)
+
+
+SalesDetails
+
+CREATE TABLE [dbo].[SalesDetails]
+(
+	[Id] INT NOT NULL, 
+    [LineNum] INT NOT NULL DEFAULT 0, 
+    [LineStatus] CHAR(1) NOT NULL DEFAULT 'O', 
+    [ItemCode] NVARCHAR(50) NOT NULL, 
+    [Description] NVARCHAR(254) NOT NULL, 
+    [Price] MONEY NOT NULL, 
+    [Discount] MONEY NOT NULL, 
+    [Tax] MONEY NOT NULL, 
+    [Quantity] FLOAT NOT NULL
+)

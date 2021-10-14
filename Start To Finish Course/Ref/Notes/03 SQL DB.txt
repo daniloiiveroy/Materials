@@ -1,0 +1,17 @@
+Sql server data tools or ssdt
+
+Create new project with SQL server
+If you don’t have this.  Go to tools and go to features
+
+You need to modify your visual studio and tick the data storage and processing
+
+Create new project with SQL server
+Add folders for our SQL
+	• dbo
+		○ Tables
+		○ Views
+		○ Stored Procedures
+	• PublishLocations
+
+Then publish the project
+Check the created database

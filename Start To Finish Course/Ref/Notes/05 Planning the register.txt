@@ -1,0 +1,42 @@
+ItemMaster
+	• ItemCode
+	• ItemName
+	• RetailPrice
+	• UserId
+	• CreatedDate
+
+Inventory
+	• ItemCode
+	• PurchaseDate
+	• PurchasePrice
+	• Quantity
+
+Sales
+	• Entry
+	• NumSeries
+	• Status
+	• SalesDate
+	• SubTotal
+	• Discount
+	• Tax
+	• Total
+	• UserId
+	• CreatedDate
+
+SalesDetails
+	• Entry
+	• LineNum
+	• LineStatus
+	• ItemCode
+	• Description
+	• Price
+	• Discount
+	• Tax
+	• Quantity
+
+Users
+	• UserId
+	• FirstName
+	• LastName
+	• Email
+	• CreatedDate

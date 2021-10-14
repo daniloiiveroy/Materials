@@ -1,0 +1,9 @@
+Additional Features
+1. Add ToDo
+2. Change index to name
+3. Add 403 page
+
+Bigfixes
+1. Edit 404 page
+2. Edit 403 page
+3. Edit index
